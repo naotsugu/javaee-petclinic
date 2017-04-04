@@ -1,0 +1,71 @@
+.*
+!.gitignore
+
+
+# Logs
+######################
+*.log
+hs_err_pid*
+
+
+# OS generated files
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+
+# Editor Files
+################
+*~
+*.swp
+
+
+# Build output directies
+################
+/target
+*/target
+/build
+*/build
+/bin
+*/bin
+/test-output
+*/test-output
+
+
+# IntelliJ specific files/directories
+################
+out
+.idea
+*.ipr
+*.iws
+*.iml
+atlassian-ide-plugin.xml
+
+
+# Eclipse specific files/directories
+################
+.classpath
+.project
+.settings
+.metadata
+
+
+# NetBeans specific files/directories
+################
+.nbattrs
+/bin
+/test-output
+nbproject
+*/build.xml
+build.xml
+*/nbbuild/
+*/dist/
+
+
+# Mobile Tools for Java (J2ME)
+################
+.mtj.tmp/
+
+

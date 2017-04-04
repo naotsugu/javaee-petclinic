@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+    id 'war'
+    id 'application'
+}
+
+sourceCompatibility = targetCompatibility = '1.8'
+mainClassName = 'code.javaee.sample.petclinic.Main'
+
+repositories {
+  jcenter()
+}
+
+dependencies {
+    compile 'fish.payara.extras:payara-micro:4.1.1.161'
+
+    compile 'org.glassfish.ozark:ozark:1.0.0-m02'
+    //compile 'org.glassfish.ozark.ext:ozark-thymeleaf:1.0.0-m02'
+    compile 'org.thymeleaf:thymeleaf:3.0.3.RELEASE'
+
+    compile 'org.webjars:bootstrap:3.3.6'
+    compile 'org.webjars:jquery:2.2.4'
+    compile 'org.webjars:jquery-ui:1.11.4'
+
+    compile 'com.h2database:h2:1.4.191'
+}
+
+task explodedWar(type: Copy) {
+    into "$buildDir/exploded"
+    with war
+}
+
+war {
+    archiveName = 'petclinic.war'
+    rootSpec.exclude('**/payara/**')
+    rootSpec.exclude('**/payara*.jar')
+    dependsOn explodedWar
+}
+
+task uber(type: JavaExec) {
+    dependsOn war
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'fish.payara.micro.PayaraMicro'
+    args '--deploy', war.archivePath.path, '--outputUberJar', "$buildDir/uber.jar"
+}

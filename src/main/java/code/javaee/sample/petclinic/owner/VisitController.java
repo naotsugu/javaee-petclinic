@@ -11,6 +11,8 @@ import javax.mvc.Models;
 import javax.mvc.annotation.Controller;
 import javax.mvc.binding.BindingResult;
 import javax.validation.Valid;
+import javax.validation.executable.ExecutableType;
+import javax.validation.executable.ValidateOnExecution;
 import javax.ws.rs.*;
 
 @Path("owners/{ownerId}/pets/{petId}/visits")
@@ -44,6 +46,7 @@ public class VisitController {
 
     @POST
     @Path("new")
+    @ValidateOnExecution(type = ExecutableType.NONE)
     public String processNewVisitForm(@PathParam("petId") int petId, @PathParam("ownerId") int ownerId, @Valid @BeanParam Visit visit) {
         if (bindingResult.isFailed()) {
             models.put("message", Message.of(bindingResult));

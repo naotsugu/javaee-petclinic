@@ -1,7 +1,5 @@
 package code.javaee.sample.petclinic.vet;
 
-import code.javaee.sample.petclinic.visit.Visit;
-
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

@@ -2,14 +2,12 @@ package code.javaee.sample.petclinic.vet;
 
 import code.javaee.sample.petclinic.core.util.ImmutableListCollector;
 import code.javaee.sample.petclinic.model.Person;
-import code.javaee.sample.petclinic.vet.Specialty;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlElement;
 import java.util.*;
 
 import static code.javaee.sample.petclinic.vet.Vet.findAll;
-import static code.javaee.sample.petclinic.visit.Visit.findByPetId;
 import static java.util.Comparator.comparing;
 
 @Entity

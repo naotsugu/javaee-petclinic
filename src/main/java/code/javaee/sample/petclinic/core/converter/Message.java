@@ -27,7 +27,7 @@ public class Message {
 
         Map<String, String> violation = bindingResult
                 .getAllViolations().stream()
-                .collect(Collectors.toMap(violationPropertyPath, ConstraintViolation::getMessage));
+                .collect(Collectors.toMap(violationPropertyPath, ConstraintViolation::getMessage, (d1, d2) -> d1));
 
         return new Message(binding, violation);
 

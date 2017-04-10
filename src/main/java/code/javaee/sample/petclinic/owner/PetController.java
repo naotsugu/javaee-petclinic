@@ -9,8 +9,9 @@ import javax.mvc.Models;
 import javax.mvc.annotation.Controller;
 import javax.mvc.binding.BindingResult;
 import javax.validation.Valid;
+import javax.validation.executable.ExecutableType;
+import javax.validation.executable.ValidateOnExecution;
 import javax.ws.rs.*;
-import java.util.Date;
 
 @Path("owners/{ownerId}/pets")
 @Controller
@@ -44,6 +45,7 @@ public class PetController {
 
     @POST
     @Path("new")
+    @ValidateOnExecution(type = ExecutableType.NONE)
     public String processCreationForm(@PathParam("ownerId") int ownerId, @Valid @BeanParam Pet pet) {
 
         if (bindingResult.isFailed()) {
@@ -78,6 +80,7 @@ public class PetController {
 
     @POST
     @Path("{petId}/edit")
+    @ValidateOnExecution(type = ExecutableType.NONE)
     public String processUpdateForm(@PathParam("ownerId") int ownerId, @BeanParam Pet pet) {
         if (bindingResult.isFailed()) {
             models.put("message", Message.of(bindingResult));

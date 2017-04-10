@@ -1,7 +1,6 @@
 package code.javaee.sample.petclinic.owner;
 
 import code.javaee.sample.petclinic.core.repository.Repository;
-import code.javaee.sample.petclinic.owner.Owner;
 
 import javax.ejb.Local;
 import java.util.Collection;

@@ -4,7 +4,6 @@ import code.javaee.sample.petclinic.owner.PetRepository;
 import code.javaee.sample.petclinic.owner.PetType;
 
 import javax.ejb.EJB;
-import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.ext.ParamConverter;
 import javax.ws.rs.ext.ParamConverterProvider;
 import javax.ws.rs.ext.Provider;

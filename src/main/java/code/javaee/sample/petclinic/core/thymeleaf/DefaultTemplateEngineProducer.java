@@ -2,7 +2,6 @@ package code.javaee.sample.petclinic.core.thymeleaf;
 
 import org.glassfish.ozark.engine.ViewEngineConfig;
 import org.thymeleaf.TemplateEngine;
-import org.thymeleaf.templateresolver.ITemplateResolver;
 import org.thymeleaf.templateresolver.ServletContextTemplateResolver;
 
 import javax.enterprise.context.Dependent;

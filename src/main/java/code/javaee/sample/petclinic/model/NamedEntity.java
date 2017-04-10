@@ -1,7 +1,5 @@
 package code.javaee.sample.petclinic.model;
 
-import code.javaee.sample.petclinic.model.BaseEntity;
-
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 import javax.ws.rs.FormParam;

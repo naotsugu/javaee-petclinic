@@ -1,6 +1,5 @@
 package code.javaee.sample.petclinic.vet;
 
-import code.javaee.sample.petclinic.vet.Vet;
 import code.javaee.sample.petclinic.core.repository.Repository;
 
 import javax.ejb.Local;

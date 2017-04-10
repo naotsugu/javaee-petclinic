@@ -14,10 +14,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static org.glassfish.ozark.util.PathUtils.ensureEndingSlash;
-import static org.glassfish.ozark.util.PathUtils.hasStartingSlash;
-import static org.glassfish.ozark.util.PropertyUtils.getProperty;
-
 @ApplicationScoped
 public class ThymeleafViewEngine extends ViewEngineBase {
 

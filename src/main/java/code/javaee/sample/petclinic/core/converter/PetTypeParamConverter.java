@@ -4,9 +4,7 @@ import code.javaee.sample.petclinic.owner.PetRepository;
 import code.javaee.sample.petclinic.owner.PetType;
 
 import javax.ws.rs.ext.ParamConverter;
-import java.text.ParseException;
 import java.util.Collection;
-import java.util.Date;
 
 public class PetTypeParamConverter implements ParamConverter<PetType> {
 

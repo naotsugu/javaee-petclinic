@@ -102,6 +102,7 @@ public class OwnerController {
 
     @POST
     @Path("{ownerId}/edit")
+    @ValidateOnExecution(type = ExecutableType.NONE)
     public String processUpdateOwnerForm(@Valid @BeanParam Owner owner, @PathParam("ownerId") int ownerId) {
         if (bindingResult.isFailed()) {
             models.put("owner", owner);

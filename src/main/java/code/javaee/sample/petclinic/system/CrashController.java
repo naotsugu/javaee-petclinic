@@ -1,6 +1,5 @@
 package code.javaee.sample.petclinic.system;
 
-import javax.enterprise.context.RequestScoped;
 import javax.mvc.annotation.Controller;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

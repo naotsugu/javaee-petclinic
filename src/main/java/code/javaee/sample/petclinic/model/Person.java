@@ -1,6 +1,5 @@
 package code.javaee.sample.petclinic.model;
 
-import code.javaee.sample.petclinic.model.BaseEntity;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.Column;
